@@ -56,6 +56,11 @@ body {
 .button-icon {
   padding-right: 6px;
 }
+.button-card-text {
+    font-size: 16px;
+line-height: 24px;
+    margin-right: 10px;
+}
 .promo {
   box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
   border-radius: 10px;
@@ -91,7 +96,6 @@ body {
 .restaurants-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 44px;
 }
 .restaurants-title {
@@ -100,12 +104,14 @@ body {
   font-size: 36px;
   line-height: 42px;
   margin: 0;
+  margin-right: 30px;
 }
 .input-search {
   display: flex;
   width: 306px;
   background: #ffffff url(../images/search.svg) no-repeat left 10px center;
   padding: 5px 32px;
+  margin-left: auto;
 }
 .cards {
   display: flex;
@@ -119,7 +125,8 @@ body {
   border-radius: 7px;
   overflow: hidden;
   margin-bottom: 30px;
-  flex-basis: 31%;
+  flex-basis: 32%;
+  text-decoration: none;
 }
 .card-imag {
   width: 384px;
@@ -142,6 +149,9 @@ body {
   line-height: 32px;
   margin: 0;
 }
+.card-title-reg {
+    font-weight: 400;
+}
 .card-tag {
   font-style: normal;
   font-weight: normal;
@@ -156,6 +166,17 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+.card-buttons {
+    display: flex;
+    align-items:center;
+    margin-top: 24px;
+}
+.card-price-bold {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 32px;
 }
 .rating {
   font-style: normal;
@@ -176,6 +197,14 @@ body {
 }
 .price {
   margin-right: 10px;
+}
+.ingredients {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8c8c8c;
+     
 }
 .category {
   text-overflow: ellipsis;
@@ -226,7 +255,7 @@ body {
 }
 @media (max-width: 1366px) {
   .container {
-    width: 960px;
+    max-width: 960px;
   }
   .promo {
     background-position: top -120px right -150px;
@@ -295,7 +324,7 @@ body {
   .card-title {
     font-size: 18px;
   }
-  .rating {
+  .card .rating {
     flex-basis: 100%;
   }
   .footer {
