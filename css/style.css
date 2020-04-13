@@ -96,6 +96,7 @@ body {
 .restaurants-heading {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 44px;
 }
 .restaurants-title {
@@ -344,6 +345,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .modal-price-tag {
     font-size: 20px;
@@ -356,6 +358,7 @@ padding: 15px 20px;
 .footer-buttons {
   display: flex;
   align-items: center;
+  padding:10px 0;
 }
 
 @media (max-width: 1366px) {
