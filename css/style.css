@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic");
+
 
 * {
   box-sizing: border-box;
@@ -7,6 +7,14 @@
 body {
   font-family: "Roboto", sans-serif;
   padding-top: 44px;
+}
+a,
+button {
+    cursor: pointer;
+    color: inherit;
+}
+.hide {
+  display: none;
 }
 .container {
   max-width: 1200px;
@@ -18,22 +26,27 @@ body {
   justify-content: space-between;
   margin-bottom: 40px;
 }
+.address {
+  flex: 0.8;
+}
 .input {
-  color: #bfbfbf;
-  font-style: normal;
-  font-weight: normal;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #d9d9d9;
   border-radius: 2px;
+  padding: 8px 8px 8px 35px;
+  background-repeat: no-repeat;
+  background-position: left 11px center;
 }
 .input-adress {
-  flex: 0.8;
-  padding: 8px 32px;
-  background: #ffffff url(../images/home.svg) no-repeat left 10px center;
+  width: 100%;
+  background-image: url(../images/home.svg);
 }
+
 .buttons {
   display: flex;
+  align-items: center; 
 }
 .button {
   display: flex;
@@ -47,20 +60,83 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
+.button:hover {
+  background: #1890ff;
+  border: 1px solid #1890ff;
+  color: #fff;
+}
+
 .button-primary {
   background: #1890ff;
   border: 1px solid #1890ff;
   color: #ffffff;
   margin-right: 10px;
 }
+.button-primary:hover {
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  color: #595959;
+}
 .button-icon {
   padding-right: 6px;
 }
 .button-card-text {
-  font-size: 16px;
-  line-height: 24px;
   margin-right: 10px;
 }
+
+.button-auth {
+  background-position: 20px 13px;
+}
+
+.button-primary .button-auth-svg {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  -webkit-mask: url("../images/user.svg") no-repeat 50% 50%;
+  mask: url("../images/user.svg") no-repeat 50% 50%;
+  background-repeat: no-repeat;
+}
+.button-primary:hover .button-auth-svg {
+  background-color: #595959;
+}
+
+.button .button-cart-svg {
+  width: 24px;
+  height: 24px;
+  background-color: #595959;
+  -webkit-mask: url("../images/shopping-cart.svg") no-repeat 50% 50%;
+  mask: url("../images/shopping-cart.svg") no-repeat 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.button-primary .button-cart-svg {
+  background-color: #ffffff;
+}
+
+.button:hover .button-cart-svg {
+  background-color: #ffffff;
+}
+
+.button-primary:hover .button-cart-svg {
+  background-color: #595959;
+}
+.button-cart {
+  display: none;
+  margin: 0 5px;
+}
+
+.button-out {
+  display: none;
+  margin: 0 5px;
+}
+
+.user-name {
+  display: none;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .promo {
   box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
   border-radius: 10px;
@@ -107,12 +183,13 @@ body {
   margin: 0;
   margin-right: 30px;
 }
-.input-search {
-  display: flex;
-  width: 306px;
-  background: #ffffff url(../images/search.svg) no-repeat left 10px center;
-  padding: 5px 32px;
+.search {
   margin-left: auto;
+}
+.input-search {
+  width: 300px;
+  background-image: url(../images/search.svg) ;
+ 
 }
 .cards {
   display: flex;
@@ -271,7 +348,6 @@ body {
 .modai-dialog {
   max-width: 780px;
   width: 95%;
- 
   background: #ffffff;
   border-radius: 5px;
   margin: auto;

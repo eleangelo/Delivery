@@ -18,3 +18,7 @@ function toggleModal() {
     modal.classList.toggle('is-open')
 }
 new WOW().init(); 
+
+// 1 day
+
+const buttonAuth = document.querySelector('button-auth');
