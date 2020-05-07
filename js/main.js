@@ -35,16 +35,28 @@ const cartButton = document.querySelector('#cart-button'),
      cardsMenu = document.querySelector('.cards-menu');
 
 let login = localStorage.getItem('gloDelivery');
+ 
+// Валидация логина:
+const valid = function(str) {
+    // - /gjhfsk/ -запись регулярного выражения
+    const nameReg = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;   
+    return nameReg.test(str);
+}
 
-function toggleModal() {
+const toggleModal = function() {
     modal.classList.toggle('is-open')
 }
 
 function toggleModalAuth() {
-    loginInput.style.borderColor = '';
-
     modalAuth.classList.toggle('is-open');
+    loginInput.style.borderColor = '';
 }
+
+function returnMain() {
+        containerPromo.classList.remove('hide')
+        restaurants.classList.remove('hide')
+        menu.classList.add('hide')
+    };
 
 function authorized() {
 
@@ -56,6 +68,7 @@ function authorized() {
         buttonOut.style.display = '';
         buttonOut.removeEventListener('click', logOut);
         checkAuth();
+        returnMain();
     }
 
     console.log('Авторизован');
@@ -75,7 +88,7 @@ function notAuthorized() {
     function logIn(event) {
         event.preventDefault();
 
-        if (loginInput.value.trim()) {
+        if (valid(loginInput.value.trim())) {
 
             login = loginInput.value;
             localStorage.setItem('gloDelivery', login);
@@ -87,7 +100,7 @@ function notAuthorized() {
             checkAuth();
         } else {
             loginInput.style.borderColor = 'red';
-        }
+        }   loginInput.value = '';
     }
 
     buttonAuth.addEventListener('click', toggleModalAuth);
@@ -119,7 +132,7 @@ function createCardsRestaurant() {
                 </div>
                 <div class="card-info">
                     <div class="rating">
-                        <img src="images/star.svg" alt="star" />4.5
+                        4.5
                     </div>
                     <div class="price">От 600 &#8381;</div>
                     <div class="category">Пицца</div>
@@ -133,6 +146,7 @@ function createCardsRestaurant() {
 
 
 // УСТАРЕВШИЙ МЕТОД ДОБАВЛЕНИЯ КАРТОЧКИ ТОВАРА
+
 
 // function createCardGood() {
 //     const card = document.createElement('div');
@@ -195,21 +209,26 @@ function createCardGood() {
 function openGoods(event) {
 
     const target = event.target;
-
     const restaurant = target.closest('.card-restaurant');
     
-if (restaurant) {
-    cardsMenu.textContent = '';
+    if (restaurant) {
 
-    containerPromo.classList.add('hide');
-    restaurants.classList.add('hide');
-    menu.classList.remove('hide');
+        if (login) {
 
-    createCardGood();
-    createCardGood();
-    createCardGood();
+            cardsMenu.textContent = '';
 
-}
+            containerPromo.classList.add('hide');
+            restaurants.classList.add('hide');
+            menu.classList.remove('hide');
+
+            createCardGood();
+            createCardGood();
+            createCardGood();
+    
+        } else {
+            toggleModalAuth();
+        }
+    }
 
 }
 
@@ -219,14 +238,16 @@ close.addEventListener('click', toggleModal);
 
 cardsRestaurants.addEventListener('click', openGoods);
 
-logo.addEventListener('click', function() {
-    containerPromo.classList.remove('hide')
-    restaurants.classList.remove('hide')
-    menu.classList.add('hide')
-});
+
 
 checkAuth();
 
 createCardsRestaurant();
 createCardsRestaurant();
 createCardsRestaurant();
+
+new Swiper ('.swiper-container', {
+  loop:true,
+  autoplay:true
+         
+})
