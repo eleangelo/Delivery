@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
 }
@@ -8,27 +6,33 @@ body {
   font-family: "Roboto", sans-serif;
   padding-top: 44px;
 }
+
 a,
 button {
-    cursor: pointer;
-    color: inherit;
+  cursor: pointer;
+  color: inherit;
 }
+
 .hide {
   display: none;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
 }
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
 }
+
 .address {
   flex: 0.8;
 }
+
 .input {
   background-color: #ffffff;
   border: 1px solid #d9d9d9;
@@ -39,15 +43,26 @@ button {
   background-repeat: no-repeat;
   background-position: left 11px center;
 }
+
 .input-adress {
   width: 100%;
   background-image: url(../images/home.svg);
 }
 
+.search {
+  margin-left: auto;
+}
+
+.input-search {
+  width: 300px;
+  background-image: url(../images/search.svg);
+}
+
 .buttons {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
+
 .button {
   display: flex;
   align-items: center;
@@ -60,6 +75,7 @@ button {
   font-size: 16px;
   line-height: 24px;
 }
+
 .button:hover {
   background: #1890ff;
   border: 1px solid #1890ff;
@@ -72,14 +88,17 @@ button {
   color: #ffffff;
   margin-right: 10px;
 }
+
 .button-primary:hover {
   background: #ffffff;
   border: 1px solid #d9d9d9;
   color: #595959;
 }
+
 .button-icon {
   padding-right: 6px;
 }
+
 .button-card-text {
   margin-right: 10px;
 }
@@ -96,6 +115,7 @@ button {
   mask: url("../images/user.svg") no-repeat 50% 50%;
   background-repeat: no-repeat;
 }
+
 .button-primary:hover .button-auth-svg {
   background-color: #595959;
 }
@@ -120,6 +140,7 @@ button {
 .button-primary:hover .button-cart-svg {
   background-color: #595959;
 }
+
 .button-cart {
   display: none;
   margin: 0 5px;
@@ -135,15 +156,34 @@ button {
   margin-right: 20px;
   font-weight: bold;
   font-size: 18px;
-  
+}
+
+.promo-slider {
+  width: 600px;
+  height: 300px;
 }
 
 .promo {
   box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
   border-radius: 10px;
-  background: #fff1b8 url(../images/promo-imag.png) no-repeat top -60px right -100px /600px;
   padding: 68px 78px;
   margin-bottom: 56px;
+}
+
+.pizza {
+  background: #fff1b8 url(../images/promo/pizza.png) no-repeat top -100px right -250px /830px;
+}
+
+.kebab {
+  background: #D6E4FF url(../images/promo/kebab.png) no-repeat top 45px right 40px / 450px;
+}
+
+.vegetables {
+  background: #FFF566 url(../images/promo/vegetables.png) no-repeat top 0 right 0 / 825px
+}
+
+.sushi {
+  background: #FFF1F0 url(../images/promo/sushi.png) no-repeat top 10px right 15px / 500px
 }
 
 .promo-title {
@@ -153,6 +193,7 @@ button {
   line-height: 46px;
   color: #302c34;
 }
+
 .promo-text {
   max-width: 538px;
   font-style: normal;
@@ -161,12 +202,9 @@ button {
   line-height: 28px;
   color: #302c34;
 }
+
 .main {
-  background: linear-gradient(
-    180deg,
-    rgba(245, 245, 245, 0) 1.04%,
-    #f5f5f5 100%
-  );
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #f5f5f5 100%);
   padding-top: 18px;
   padding-bottom: 60px;
 }
@@ -181,23 +219,21 @@ button {
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
-  margin: 0;
-  margin-right: 30px;
+  margin: 0 30px 0 0;
 }
-.search {
-  margin-left: auto;
+.section-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
 }
-.input-search {
-  width: 300px;
-  background-image: url(../images/search.svg) ;
- 
-}
+
 .cards {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
 .card {
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
@@ -207,20 +243,31 @@ button {
   flex-basis: 32%;
   text-decoration: none;
 }
+
 .card-imag {
-  width: 384px;
+  width: 100%;
   height: 250px;
   object-fit: cover;
 }
+
 .card-text {
+  min-height: 275px;
   padding: 20px 23px 35px 23px;
+  display: flex;
+  flex-direction: column;
 }
-.card-heding {
+
+.restaurants  {
+  min-height: auto;
+}
+
+.card-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .card-title {
   font-style: normal;
   font-weight: bold;
@@ -228,12 +275,13 @@ button {
   line-height: 32px;
   margin: 0;
 }
+
 .card-title-reg {
   font-weight: 400;
 }
+
 .card-tag {
-  font-style: normal;
-  font-weight: normal;
+  
   font-size: 12px;
   line-height: 20px;
   background: #262626;
@@ -241,55 +289,62 @@ button {
   color: #ffffff;
   padding: 1px 8px;
 }
+
 .card-info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .card-buttons {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 24px;
+  flex-grow: 1;
 }
+
 .card-price-bold {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  margin-left: 32px;
+  margin-left: 30px;
+  line-height: 32px;
 }
+
 .rating {
+  background: url("../images/star.svg") no-repeat 0 7px ;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 32px;
   color: #ffc107;
   padding-left: 20px;
-  margin-right: 26px;
 }
+
 .price,
 .category {
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 32px;
   color: #8c8c8c;
 }
+
 .price {
   margin-right: 10px;
 }
+
 .ingredients {
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 21px;
   color: #8c8c8c;
 }
+
 .category {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   max-width: 150px;
 }
+
 .price:after {
   content: "";
   width: 5px;
@@ -300,18 +355,22 @@ button {
   border-radius: 50%;
   margin-left: 10px;
 }
+
 .footer {
   padding: 60px 0;
 }
+
 .footer-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .footer-nav {
   margin-right: auto;
   margin-left: 35px;
 }
+
 .footer-link {
   display: inline-block;
   font-style: normal;
@@ -321,16 +380,20 @@ button {
   color: #595959;
   text-decoration: none;
 }
+
 .footer-link:not(:last-child) {
   margin-right: 15px;
 }
+
 .socials-links {
   display: flex;
   align-items: center;
 }
+
 .social-link:not(:last-child) {
   margin-right: 21px;
 }
+
 .modal {
   position: fixed;
   display: none;
@@ -341,6 +404,7 @@ button {
   background: rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
+
 .modal-auth {
   position: fixed;
   left: 0;
@@ -353,11 +417,11 @@ button {
 }
 
 .is-open {
-    display: flex;
+  display: flex;
 }
 
 .modal-body {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 .modai-dialog {
   max-width: 780px;
@@ -386,19 +450,21 @@ button {
   width: 80px;
   display: inline-block;
 }
+
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 45px;
 }
+
 .modal-title {
-  font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   margin: 0;
 }
+
 .close {
   border: none;
   font-size: 36px;
@@ -422,25 +488,26 @@ button {
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 15px;
 }
+
 .food-name {
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 32px;
 }
+
 .food-price {
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 32px;
   margin-left: auto;
   margin-right: 47px;
 }
+
 .food-counter {
   display: flex;
   align-items: center;
   margin-right: 15px;
 }
+
 .counter-button {
   display: flex;
   align-items: center;
@@ -449,17 +516,24 @@ button {
   height: 32px;
   border: 1px solid #40a9ff;
   background: #ffffff;
-  box-sizing: border-box;
   border-radius: 2px;
   font-size: 14px;
   line-height: 22px;
   color: #40a9ff;
 }
+
+.counter-button:hover {
+  background: #40a9ff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
 .counter {
   font-size: 16px;
   line-height: 24px;
   margin: 0 13px;
 }
+
 .modal-footer {
   display: flex;
   align-items: center;
@@ -472,45 +546,86 @@ button {
 }
 
 .modal-price-tag {
-    font-size: 20px;
-    line-height: 23px;
-    color: #FAFAFA; 
-background: #262626;
-border-radius: 5px;
-padding: 15px 20px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fafafa;
+  background: #262626;
+  border-radius: 5px;
+  padding: 15px 20px;
 }
+
 .footer-buttons {
   display: flex;
   align-items: center;
-  padding:10px 0;
+  padding: 10px 0;
 }
 
 @media (max-width: 1366px) {
   .container {
     max-width: 960px;
   }
-  .promo {
-    background-position: top -120px right -150px;
-    background-size: 500px;
+
+  .pizza {
+    background-position: center right -300px;
+        background-size: 750px;
   }
+
+  .kebab {
+    background-position: top -5px right -93px;
+    background-size: 530px;
+}
+
+.vegetables {
+    background-position: top 0 right -93px;
+    background-size: 820px;
+}
+
+.sushi {
+    background-position: center right -90px;
+}
+
   .rating {
     margin-right: 15px;
-    padding-left: 10px;
+    
   }
+
   .price,
   .category {
     font-size: 14px;
   }
+
 }
 @media (max-width: 992px) {
   .container {
     max-width: 720px;
   }
-  .promo {
-    padding: 40px;
-    background-position: top -120px right -170px;
-    background-size: 400px;
-  }
+
+  .pizza {
+    padding: 50px;
+    background-size: 500px;
+    background-position: center right -200px;
+}
+
+
+.kebab {
+    background-position: top 55px right -100px;
+    background-size: 385px;
+}
+
+.vegetables {
+    background-position: top 0 right -280px;
+    background-size: 810px;
+}
+
+.sushi {
+    background-position: top 30px right -175px;
+}
+
+.promo-text {
+  font-size: 18px;
+  max-width: 400px;
+}
+
   .card {
     flex-basis: 48%;
   }
@@ -520,35 +635,37 @@ padding: 15px 20px;
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 540px;
+    max-width: 560px;
   }
-  .header {
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .input-adress {
-    order: 3;
-    margin-top: 15px;
-    flex: 1;
-  }
-  .main {
-    padding-bottom: 10px;
-  }
-  .promo {
-    padding: 40px;
-    background-position: top -60px right -130px;
-    background-size: 280px;
-  }
+  
+  .pizza {
+    background-size: 400px;
+    background-position: bottom 50px right -200px;
+}
+
+.kebab {
+    background-position: top -5px right -74px;
+    background-size: 300px;
+}
+
+.vegetables {
+    background-position: top 0 right -240px;
+    background-size: 702px;
+}
+
+.sushi {
+    background-position: top -24px right -75px;
+    background-size: 302px;
+}
+
   .promo-title {
     font-size: 25px;
     line-height: 1.3;
-    margin: 0;
   }
-  .promo-text {
-    font-size: 16px;
-    line-height: 1.4;
-    max-width: 350px;
-  }
+
+  .card-text {
+    min-height: 290px;
+}
 
   .card-info {
     flex-wrap: wrap;
@@ -559,6 +676,10 @@ padding: 15px 20px;
   .card .rating {
     flex-basis: 100%;
   }
+
+  .card-price-bold {
+    margin-left: 20px;
+}
   .footer {
     padding: 30px;
   }
